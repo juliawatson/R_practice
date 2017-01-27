@@ -1,6 +1,6 @@
 ---
 runtime: shiny
-output: html_document
+output: github_document
 ---
 
 ### Here are two Shiny widgets
