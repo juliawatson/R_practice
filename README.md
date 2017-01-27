@@ -1,15 +1,14 @@
-Hi there!
+---
+runtime: shiny
+output: html_document
+---
 
-* point 1
-* point 2
+### Here are two Shiny widgets
 
-```{r, echo=FALSE}
-numericInput("rows", "How many cars?", 5)
-renderTable({
-  head(cars, input$rows)
-})
-```
-
-```{r, echo = FALSE}
-kmeans_cluster(iris)
+```{r echo = FALSE}
+selectInput("n_breaks", label = "Number of bins:",
+              choices = c(10, 20, 35, 50), selected = 20)
+  
+sliderInput("bw_adjust", label = "Bandwidth adjustment:",
+              min = 0.2, max = 2, value = 1, step = 0.2)
 ```
